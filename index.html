@@ -6,8 +6,9 @@
     <title>Portfolio - AkarshanGhosh</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="tailwind.config.js"></script>
+   
 </head>
-<body>
+<body class="overflow-x-hidden">
 
 
     <div class="fixed top-0 w-11/12 -z-10 translate-y-[-80%]">
@@ -37,12 +38,29 @@
 
 
 
-
-                
+                <button class="block md:hidden ml-20" onclick="openMenu()">
+                    <img src="images/menu-black.png" alt="" class="w-6">
+                </button>
 
         </div>
+        <!--mobile menu-->
+       <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 
+       fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 
+       transition duration-500">
+
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="images/close-black.png" alt="" class="w-5 cursor-pointer"
+                >
+            </div>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#contact">Contact me</a></li>
+       </ul>
         
     </nav>
+
     
+<script src="script.js"></script>
 </body>
 </html>
