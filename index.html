@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class=" scroll-smooth">
+<html lang="en" class=" scroll-smooth ">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +8,18 @@
     <script src="tailwind.config.js"></script>
    
 </head>
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden dark:bg-darkTheme dark:text-white">
 
 
-    <div class="fixed top-0 w-11/12 -z-10 translate-y-[-80%]">
+    <div class="fixed top-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
         <img src="images/header-bg-color.png" alt="" class="w-full">
     </div>
     <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%]  py-4 flex items-center
     justfy-between z-50">
-        <img src="images/logo1.png" alt="logo"
-        class="w-28 cursor-pointer mr-14">
+        <img src="images/logo1.png" alt="logo"class="w-28 cursor-pointer mr-14 dark:hidden">
+        <img src="images/logo2.png" alt="logo"class="w-28 cursor-pointer mr-14 hidden dark:block">
         <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 
-        py-3 bg-white shadow-sm bg-opacity-50 mx-auto">
+        py-3 bg-white shadow-sm bg-opacity-50 mx-auto dark:border dark: border-white/50 dark:bg-transparent">
             <li><a href="#top">Home</a></li>
             <li><a href="#about">About me</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -27,31 +27,32 @@
             <li><a href="#contact">Contact me</a></li>
         </ul>
         <div class="flex items-center gap-9">
-            <button ><img src="images/moon_icon.png" alt=""
-                class="w-6"></button>
+            <button onclick="toggleTheme()">
+                <img src="images/moon_icon.png" alt=""class="w-6 dark:hidden">
+                <img src="images/sun_icon.png" alt=""class="w-6 hidden dark:block">
+            </button>
     
-            <a href="#contact" 
-            class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500
-            rounded-full ml-auto">
-            Contact 
-                <img src="images/arrow-icon.png" alt=""
-                class="w-3"></a>
-
+            <a href="#contact" class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-auto dark:border-white/50">
+                Contact 
+                <img src="images/arrow-icon.png" alt=""class="w-3 dark:hidden">
+                <img src="images/arrow-icon-dark.png" alt=""class="w-3 hidden dark:block"></a>
+           
 
 
                 <button class="block md:hidden ml-20" onclick="openMenu()">
-                    <img src="images/menu-black.png" alt="" class="w-6">
+                    <img src="images/menu-black.png" alt="" class="w-6 dark:hidden">
+                    <img src="images/menu-white.png" alt="" class="w-6 hidden dark:block">
                 </button>
 
         </div>
         <!--mobile menu-->
        <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 
        fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 
-       transition duration-500">
+       transition duration-500 dark:bg-darkHover dark:text-white">
 
             <div class="absolute right-6 top-6" onclick="closeMenu()">
-                <img src="images/close-black.png" alt="" class="w-5 cursor-pointer"
-                >
+                <img src="images/close-black.png" alt="" class="w-5 cursor-pointer dark:hidden">
+                <img src="images/close-white.png" alt="" class="w-5 cursor-pointer hidden dark:block">
             </div>
             <li><a href="#top" onclick="closeMenu()">Home</a></li>
             <li><a href="#about" onclick="closeMenu()">About me</a></li>
@@ -74,10 +75,10 @@
         that make a difference. </p>
 
     <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
-        <a href="#contact" class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2">
+        <a href="#contact" class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2 dark:border-transparent">
             Contact me <img src="images/right-arrow-white.png" alt="" class="w-4">
         </a>
-        <a href="resume/profile.pdf" download class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white">
+        <a href="resume/profile.pdf" download class="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black">
             My resume <img src="images/download-icon.png" alt="" class="w-4">
         </a>
     </div>
@@ -120,32 +121,34 @@
 
             <ul class=" grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
                 <li class=" border-[0.5px] border-gray-400 rounded-xl p-6
-                 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#000]">
+                 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
                  <img src="images/code-icon.png" alt="" class="w-7 
-                    mt-3">
-                    <h3 class="my-4 font-semibold text-gray-700">Language</h3>
-                    <p class="text-gray-600 text-sm">Python, Javascript, React Js, Next Js, C</p>
+                    mt-3 dark:hidden">
+                    <img src="images/code-icon-dark.png" alt="" class="w-7 
+                    mt-3 hidden dark:block">
+                    <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Language</h3>
+                    <p class="text-gray-600 text-sm dark:text-white/80">Python, Javascript, React Js, Next Js, C</p>
 
                 </li>
                 <li class=" border-[0.5px] border-gray-400 rounded-xl p-6
-                 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#000]">
-                 <img src="images/edu-icon.png" alt="" class="w-7 
-                    mt-3">
-                    <h3 class="my-4 font-semibold text-gray-700">Education</h3>
-                    <p class="text-gray-600 text-sm">I am pursuing my B.Tech in Electronics and Communication Engineering after 
+                 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"">
+                 <img src="images/edu-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                 <img src="images/edu-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                    <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Education</h3>
+                    <p class="text-gray-600 text-sm dark:text-white/80">I am pursuing my B.Tech in Electronics and Communication Engineering after 
                         completing high school at Kendriya Vidyalaya Lumding.</p>
 
                 </li>
                 <li class=" border-[0.5px] border-gray-400 rounded-xl p-6
-                 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0#000]">
-                 <img src="images/project-icon.png" alt="" class="w-7 
-                    mt-3">
-                    <h3 class="my-4 font-semibold text-gray-700">Project</h3>
-                    <p class="text-gray-600 text-sm">Build an IoT based Flood Monitoring System.</p>
+                 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"">
+                 <img src="images/project-icon.png" alt="" class="w-7 mt-3 dark:hidden">
+                 <img src="images/project-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                    <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Project</h3>
+                    <p class="text-gray-600 text-sm dark:text-white/80">Build an IoT based Flood Monitoring System.</p>
 
                 </li>
             </ul>
-            <h4 class=" my-3 text-gray-700">Tools i use</h4>
+            <h4 class=" my-3 text-gray-700 dark:text-white">Tools i use</h4>
             <ul class=" flex items-center gap-3 sm:gap-5">
                 <li class="flex items-center justify-center 2-12 sm:w-14 
                  aspect-square border border-gray-400 rounded-lg cursor-pointer
@@ -201,30 +204,30 @@ id="projects"
  <div class="grid grid-cols-1 sm:grid-cols-4 gap-6 my-10 ">
     <div class="border border-gray-400 rounded-lg px-8 py-12
      hover:shadow-black cursor-pointer hover:bg-lightHover 
-     hover: -translate-y-1 duration-500">
+     hover: -translate-y-1 duration-500 dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
         <img src="images/nodemcu-removebg-preview.png" alt="" class="w-15">
-        <h3 class=" text-lg my-4 text-gray-700">IoT based Flood Monitoring system</h3>
-        <p class=" text-sm text-gray-600 leading-5 ">
+        <h3 class=" text-lg my-4 text-gray-700 dark:text-white">IoT based Flood Monitoring system</h3>
+        <p class=" text-sm text-gray-600 leading-5 dark:text-white/80 ">
             We're using IoT technology to monitor water levels.......</p>
             <a href="https://www.linkedin.com/posts/akarshan-ghosh_im-happy-to-share-this-iot-based-flood-level-activity-7220481906641944576-DRuB?utm_source=share&utm_medium=member_desktop" class=" flex items-center gap-2 text-sm mt-5">Read More <img src="images/right-arrow.png" alt=""
                 class="w-4"></a>
     </div>
     <div class="border border-gray-400 rounded-lg px-8 py-12
      hover:shadow-black cursor-pointer hover:bg-lightHover 
-     hover: -translate-y-1 duration-500">
+     hover: -translate-y-1 duration-500 dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
         <img src="images/pro2.png.jpg" alt="" class="w-15">
-        <h3 class=" text-lg my-4 text-gray-700">Django Website</h3>
-        <p class=" text-sm text-gray-600 leading-5 ">
+        <h3 class=" text-lg my-4 text-gray-700 dark:text-white">Django Website</h3>
+        <p class=" text-sm text-gray-600 leading-5 dark:text-white/80 ">
             A Django website that displays water level data with graphs. This data is fetched from the ThingSpeak cloud........</p>
             <a href="https://www.linkedin.com/posts/akarshan-ghosh_im-happy-to-share-this-iot-based-flood-level-activity-7220481906641944576-DRuB/?utm_source=share&utm_medium=member_desktop" class=" flex items-center gap-2 text-sm mt-5">Read More <img src="images/right-arrow.png" alt=""
                 class="w-4"></a>
     </div>
     <div class="border border-gray-400 rounded-lg px-8 py-12
     hover:shadow-black cursor-pointer hover:bg-lightHover 
-    hover: -translate-y-1 duration-500">
+    hover: -translate-y-1 duration-500 dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
        <img src="images/pro.png" alt="" class="w-15">
-       <h3 class=" text-lg my-4 text-gray-700">Projects are currently in progress</h3>
-       <p class=" text-sm text-gray-600 leading-5 ">
+       <h3 class=" text-lg my-4 text-gray-700 dark:text-white leading-5 dark:text-white ">Projects are currently in progress</h3>
+       <p class=" text-sm text-gray-600 leading-5 dark:text-white/80 ">
            Projects are currently in progress.......</p>
            <!--
            <a href="" class=" flex items-center gap-2 text-sm mt-5">Read More <img src="images/right-arrow.png" alt=""
@@ -232,10 +235,10 @@ id="projects"
            </div>
            <div class="border border-gray-400 rounded-lg px-8 py-12
            hover:shadow-black cursor-pointer hover:bg-lightHover 
-           hover: -translate-y-1 duration-500">
+           hover: -translate-y-1 duration-500 dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
               <img src="images/pro.png" alt="" class="w-15">
-              <h3 class=" text-lg my-4 text-gray-700">Projects are currently in progress</h3>
-              <p class=" text-sm text-gray-600 leading-5 ">
+              <h3 class=" text-lg my-4 text-gray-700 dark:text-white">Projects are currently in progress</h3>
+              <p class=" text-sm text-gray-600 leading-5 leading-5 dark:text-white/80  ">
                   Projects are currently in progress.......</p>
                   <!--<a href="" class=" flex items-center gap-2 text-sm mt-5">Read More <img src="images/right-arrow.png" alt=""
                       class="w-4"></a>-->
@@ -253,7 +256,7 @@ id="projects"
         and gained valuable experience.
     </p>
 
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 my-10">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 my-10 dark:text-black">
         <div class="aspect-square bg-[url('images/exp1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
             <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 transform -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
                 <div>
@@ -292,7 +295,7 @@ id="projects"
 </div>
 <!-------------------------------------------------------------------------------------Contact-->
 <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('images/footer-bg-color.png')]
- bg-no-repeat bg-[length:90%_auto] bg-center">
+ bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
     <h4 class="text-center mb-2 text-lg">Connect with me</h4>
     <h2 class="text-center text-5xl">Get in touch</h2>
     <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
@@ -304,18 +307,18 @@ id="projects"
         <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
             <input type="text" placeholder="Enter Your name " 
             class="flex-1 p-3 outline-none border-[0.5px] 
-            border-gray-400 rounded-md bg-white">
+            border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:borderw-white/90">
            
            
             <input type="email" placeholder="Enter Your email " 
             class="flex-1 p-3 outline-none border-[0.5px] 
-            border-gray-400 rounded-md bg-white">
+            border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:borderw-white/90">
         </div>
         <textarea rows="6" placeholder="Enter your message" class="w-full
         p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white
-         mb-6 "></textarea>
+         mb-6 dark:bg-darkHover/30 dark:borderw-white/90 "></textarea>
          <button class="py-3 px-8 w-max flex items-center justify-between
-          gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500">Submit now
+          gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover">Submit now
             <img src="images/right-arrow-dark.png" alt="" class="w-4">
          </button>
     </form>
@@ -326,9 +329,11 @@ id="projects"
 
 <div class="mt-20">
     <div class="text-center">
-        <img src="images/logo1.png" alt="" class="w-36 mx-auto mb-2">
+        <img src="images/logo1.png" alt="" class="w-36 mx-auto mb-2 dark:hidden">
+        <img src="images/logo2.png" alt="" class="w-36 mx-auto mb-2 hidden dark:block">
         <div class="w-max flex items-center gap-2 mx-auto">
-            <img src="images/mail_icon.png" alt="" class="w-6">
+            <img src="images/mail_icon.png" alt="" class="w-6 dark:hidden">
+            <img src="images/mail_icon_dark.png" alt="" class="w-6 hidden dark:block">
             akarshanghosh28@gmail.com
         </div>
     </div>
